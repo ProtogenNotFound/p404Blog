@@ -4,11 +4,19 @@ import type { HTMLAttributes } from 'astro/types';
 type Props = HTMLAttributes<'a'>;
 
 const { href, class: className, ...props } = Astro.props;
-const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
-const hrefPath = typeof href === 'string' ? href.replace(import.meta.env.BASE_URL, '/') : '';
+const basePath = import.meta.env.BASE_URL.endsWith('/')
+	? import.meta.env.BASE_URL.slice(0, -1)
+	: import.meta.env.BASE_URL;
+const baseUrl = `${basePath}/`;
+const pathnameWithoutBase = Astro.url.pathname.startsWith(basePath)
+	? Astro.url.pathname.slice(basePath.length)
+	: Astro.url.pathname;
+const pathname = pathnameWithoutBase.startsWith('/') ? pathnameWithoutBase : `/${pathnameWithoutBase}`;
+const hrefPath =
+	typeof href === 'string' ? (href.startsWith(basePath) ? href.slice(basePath.length) || '/' : href) : '';
 const resolvedHref =
 	typeof href === 'string' && href.startsWith('/')
-		? `${import.meta.env.BASE_URL}${href.slice(1)}`
+		? `${baseUrl}${href.replace(/^\/+/, '')}`
 		: href;
 const subpath = pathname.match(/[^\/]+/g);
 const isActive = hrefPath === pathname || hrefPath === '/' + (subpath?.[0] || '');
