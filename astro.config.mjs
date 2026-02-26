@@ -7,6 +7,6 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://ProtogenNotFound.github.io',
-	base '/p404Blog',
+	base: '/p404Blog',
 	integrations: [mdx(), sitemap()],
 });
