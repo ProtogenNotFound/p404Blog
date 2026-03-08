@@ -1,7 +1,8 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
+title: 'ARCST - an actual real size comparison tool'
+description: 'Reverse Engineering Bad Dragons 3d viewer so i wont accidentally buy a dildo thats as large as my forearm'
+pubDate: 'Mar 08 2026'
+updateDate: 'Mar 08 2026'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 ---
 
