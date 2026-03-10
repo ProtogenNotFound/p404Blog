@@ -22,7 +22,7 @@ I'll open source the full f3d design soon, as well as everything else
 ### Hardware
 
 My goal was to only use extrusions from the Ender 3 I had lying around as well as little types of screws as possible. Thus, this thing's basically a rebuild 1/2 of an Ender with a ton of mostly M5x12 Socket head screws and a few extra bits.
-The piston mechanism essentially reuses the z-axis
+The piston mechanism essentially reuses the z-axis but in reverse lol (axis slides, carriage is fixed). There are lots of mechanisms in there that I'm at least sorta proud of and some I've scrapped because I couldn't get them to work (height adjustment originally used a mechanism kinda like an aperture where youd twist the bottom to lock/unlock it but honestly having a button was just more practical).
 To be continued...
 
 ### Software
