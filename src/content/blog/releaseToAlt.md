@@ -3,7 +3,7 @@ title: 'releaseToAlt - a small, vibe-coded github anonymizer'
 description: 'Because I really dont want to switch accounts every time I work on kinky stuff'
 pubDate: 'Mar 10 2026'
 updateDate: 'Mar 10 2026'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/releaseToAltThumbnail.png'
 ---
 
 ### Switching accounts is annoying
