@@ -3,7 +3,7 @@ title: 'COSSM - Cheap Open Source Sex Machine'
 description: 'If you have an old Hoverboard and Ender 3, its probably under 100 bucks'
 pubDate: 'Mar 08 2026'
 updateDate: 'Mar 09 2026'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/cossmThumbnail.png'
 ---
 
 ### If you have an old Hoverboard and Ender 3, its probably under 100 bucks
