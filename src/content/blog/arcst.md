@@ -2,7 +2,7 @@
 title: 'ARCST - an actual real size comparison tool'
 description: 'Reverse Engineering Bad Dragons 3d viewer so i wont accidentally buy a dildo thats as large as my forearm'
 pubDate: 'Mar 08 2026'
-updateDate: 'Mar 08 2026'
+updateDate: 'Mar 24 2026'
 heroImage: '../../assets/arcstThumbnail.png'
 ---
 
@@ -31,7 +31,7 @@ There's a bunch of extra stuff afterwards which I might write about later (I tri
 
 ### BD has an actual size comparison tool - can we use that?
 
-Yup, we can. Back to the API. Luckily, BDs tool litterally just scales 2d images of the different models and a credit card next to it. We can get those images via scaleImages and there seems to be no further scaling logic, so we can assume that we can just get the height of those images and calculate the scale factor from there. Turns out, the toys size in inches is `pixels/104` inches tall and so converting that from "freedom" units into freedom units, multiply that by 25.4 to get the size in mm which we can use in RealityKit to scale our models.
+Yup, we can. Back to the API. Luckily, BDs tool litterally just scales 2d images of the different models and a credit card next to it. `/api/products/{sku}` has a `scaleImages` field which is a list of images of the toy at different scales. There seems to be no further scaling logic, so we can assume that we can just get the height of those images and calculate the scale factor from there (either by using the credit card, which has a standardized size, or using any toy's image in relation to it's total size). Turns out, the toys size in inches is `pixels/104` inches tall and so converting that from "freedom" units into freedom units, multiply that by 25.4 to get the size in mm which we can use in RealityKit to scale our models.
 
 ### Great, we've got the model in the right size, but it still looks like ass
 
